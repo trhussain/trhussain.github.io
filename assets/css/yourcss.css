@@ -1,0 +1,6 @@
+.circle-crop {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Make width and height equal for a perfect circle */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the circle area without distortion */
+}
