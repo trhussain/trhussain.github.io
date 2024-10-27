@@ -1,17 +1,16 @@
-/* Profile card styling */
-.profile-card {
+#main .profile-card {
     text-align: center;
     font-family: Arial, sans-serif;
 }
 
-/* Circular image crop */
-.circle-crop {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Same as width for a perfect circle */
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image fills the circle without distortion */
-    border: 3px solid #333;
+#main .circle-crop {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
 }
+
+
 
 /* Name styling */
 .profile-info .name {
