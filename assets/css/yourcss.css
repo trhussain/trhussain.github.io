@@ -1,17 +1,16 @@
+/* Profile card styling */
+.profile-card {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
 /* Circular image crop */
 .circle-crop {
     width: 150px; /* Adjust size as needed */
     height: 150px; /* Same as width for a perfect circle */
     border-radius: 50%;
     object-fit: cover; /* Ensures the image fills the circle without distortion */
-    border: 3px solid #333; /* Optional border for styling */
-}
-
-/* Profile card styling */
-.profile-card {
-    text-align: center;
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
+    border: 3px solid #333;
 }
 
 /* Name styling */
@@ -19,7 +18,7 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #333; /* Color of your choice */
-    margin: 10px 0 5px;
+    margin: 5px 0; /* Reduce space between name and title */
 }
 
 /* Title styling */
@@ -27,6 +26,7 @@
     font-size: 1.2rem;
     color: #555; /* Secondary color */
     font-weight: 600;
+    margin: 0; /* Remove additional padding */
 }
 
 
