@@ -42,3 +42,6 @@ h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 }
 
 
+.major:hover {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
