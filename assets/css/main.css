@@ -2632,17 +2632,17 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.main {
+		.image.massively {
 			display: block;
 			margin: 4rem 0;
 			width: 100%;
 		}
 
-			.image.main:first-child {
+			.image.massively:first-child {
 				margin-top: 0;
 			}
 
-			.image.main img {
+			.image.massively img {
 				width: 100%;
 			}
 
@@ -2652,7 +2652,7 @@ input, select, textarea {
 				margin: 2rem 0;
 			}
 
-			.image.main {
+			.image.massively {
 				margin: 2rem 0;
 			}
 
@@ -3754,9 +3754,9 @@ input, select, textarea {
 
 		}
 
-/* Main */
+/* massively */
 
-	#main {
+	#massively {
 		background-color: #ffffff;
 		position: relative;
 		margin: 0 auto;
@@ -3765,41 +3765,41 @@ input, select, textarea {
 		z-index: 2;
 	}
 
-		#main > * {
+		#massively > * {
 			padding: 4rem 4rem 2rem 4rem ;
 			border-top: solid 2px #eeeeee;
 			margin: 0;
 		}
 
-			#main > *:first-child {
+			#massively > *:first-child {
 				border-top: 0;
 			}
 
-		#main > footer {
+		#massively > footer {
 			text-align: center;
 		}
 
-		#main > .post {
+		#massively > .post {
 			padding: 8rem 8rem 6rem 8rem ;
 		}
 
-			#main > .post header.major > .date {
+			#massively > .post header.major > .date {
 				margin-top: -2rem;
 			}
 
-			#main > .post header.major > h1, #main > .post header.major h2 {
+			#massively > .post header.major > h1, #massively > .post header.major h2 {
 				font-size: 4rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
 			}
 
-			#main > .post.featured {
+			#massively > .post.featured {
 				text-align: center;
 			}
 
 			@media screen and (max-width: 1280px) {
 
-				#main > .post {
+				#massively > .post {
 					padding: 6rem 4rem 4rem 4rem ;
 				}
 
@@ -3807,16 +3807,16 @@ input, select, textarea {
 
 			@media screen and (max-width: 736px) {
 
-				#main > .post {
+				#massively > .post {
 					padding: 4rem 2rem 2rem 2rem ;
 				}
 
-					#main > .post header.major > .date {
+					#massively > .post header.major > .date {
 						margin-top: -1rem;
 						margin-bottom: 2rem;
 					}
 
-					#main > .post header.major > h1, #main > .post header.major h2 {
+					#massively > .post header.major > h1, #massively > .post header.major h2 {
 						font-size: 2.5rem;
 						line-height: 1.2;
 						margin: 0 0 1.5rem 0;
@@ -3824,7 +3824,7 @@ input, select, textarea {
 
 			}
 
-		#main > .posts {
+		#massively > .posts {
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3842,7 +3842,7 @@ input, select, textarea {
 			padding: 0;
 		}
 
-			#main > .posts > * {
+			#massively > .posts > * {
 				-moz-flex-shrink: 1;
 				-webkit-flex-shrink: 1;
 				-ms-flex-shrink: 1;
@@ -3853,16 +3853,16 @@ input, select, textarea {
 				flex-grow: 0;
 			}
 
-			#main > .posts > * {
+			#massively > .posts > * {
 				width: 50%;
 			}
 
-			#main > .posts > * {
+			#massively > .posts > * {
 				padding: 4rem;
 				width: 50%;
 			}
 
-			#main > .posts > article {
+			#massively > .posts > article {
 				border-color: #eeeeee;
 				border-left-width: 2px;
 				border-style: solid;
@@ -3870,25 +3870,25 @@ input, select, textarea {
 				text-align: center;
 			}
 
-				#main > .posts > article > :last-child {
+				#massively > .posts > article > :last-child {
 					margin-bottom: 0;
 				}
 
-				#main > .posts > article:nth-child(2n - 1) {
+				#massively > .posts > article:nth-child(2n - 1) {
 					border-left-width: 0;
 				}
 
-				#main > .posts > article:nth-child(-n + 2) {
+				#massively > .posts > article:nth-child(-n + 2) {
 					border-top-width: 0;
 				}
 
 			@media screen and (max-width: 980px) {
 
-				#main > .posts > * {
+				#massively > .posts > * {
 					width: 50%;
 				}
 
-				#main > .posts > * {
+				#massively > .posts > * {
 					padding: 2.5rem;
 					width: 50%;
 				}
@@ -3897,32 +3897,32 @@ input, select, textarea {
 
 			@media screen and (max-width: 736px) {
 
-				#main > .posts > * {
+				#massively > .posts > * {
 					width: 100%;
 				}
 
-				#main > .posts > * {
+				#massively > .posts > * {
 					padding: 2rem;
 					width: 100%;
 				}
 
-				#main > .posts > article:nth-child(2n - 1) {
+				#massively > .posts > article:nth-child(2n - 1) {
 					border-left-width: 2px;
 				}
 
-				#main > .posts > article:nth-child(-n + 2) {
+				#massively > .posts > article:nth-child(-n + 2) {
 					border-top-width: 2px;
 				}
 
-				#main > .posts > article:nth-child(n) {
+				#massively > .posts > article:nth-child(n) {
 					border-left-width: 0;
 				}
 
-				#main > .posts > article:nth-child(-n + 1) {
+				#massively > .posts > article:nth-child(-n + 1) {
 					border-top-width: 0;
 				}
 
-				#main > .posts > article .image {
+				#massively > .posts > article .image {
 					max-width: 25rem;
 					margin-left: auto;
 					margin-right: auto;
@@ -3932,7 +3932,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#main > * {
+			#massively > * {
 				padding: 2rem 2rem 0.1rem 2rem ;
 			}
 
@@ -3940,7 +3940,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
-			#main {
+			#massively {
 				width: 100%;
 			}
 
