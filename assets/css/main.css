@@ -2689,19 +2689,20 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
-		ul.actions li {
-			padding: 0 0 0 1rem;
-			vertical-align: middle;
-		}
-
-		ul.actions.special {
-			-moz-justify-content: center;
-			-webkit-justify-content: center;
-			-ms-justify-content: center;
-			justify-content: center;
-			width: 100%;
-			margin-left: 0;
-		}
+	ul.actions.special {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	ul.actions.special li {
+		padding: 0;
+		margin: 0;
+	}
+	
 
 			ul.actions.special li:first-child {
 				padding-left: 0;
