@@ -1,6 +1,44 @@
+/* Circular image crop */
 .circle-crop {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px; /* Make width and height equal for a perfect circle */
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Same as width for a perfect circle */
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image covers the circle area without distortion */
+    object-fit: cover; /* Ensures the image fills the circle without distortion */
+    border: 3px solid #333; /* Optional border for styling */
 }
+
+/* Profile card styling */
+.profile-card {
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Name styling */
+.profile-info .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Color of your choice */
+    margin: 10px 0 5px;
+}
+
+/* Title styling */
+.profile-info .title {
+    font-size: 1.2rem;
+    color: #555; /* Secondary color */
+    font-weight: 600;
+}
+
+
+
+h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+    border-bottom: solid 1px #ffffff;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -ms-max-content;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin: 0 0 2rem 0;
+}
+
+
