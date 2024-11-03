@@ -17,7 +17,7 @@ scene.add(light);
 
 // Load the GLTF model
 const loader = new GLTFLoader();
-loader.load('./robot.gltf', function(gltf) {
+loader.load('robot.gltf', function(gltf) {
     const model = gltf.scene;
     scene.add(model);
     model.position.set(0, -1, 0); // Adjust position if needed
