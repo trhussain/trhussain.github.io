@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "npm run deploy \r - pushes to gh-pages dir",
   "dependencies": {
     "gh-pages": "^6.2.0"
   }
