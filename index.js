@@ -1,35 +1,55 @@
 import * as THREE from 'https://unpkg.com/three@0.153.0/build/three.module.js';
+import { GLTFLoader } from '/loaders/GLTFLoader.js';
 
+let scene, camera, renderer, model;
 
-import { GLTFLoader } from 'https://unpkg.com/three@0.153.0/examples/jsm/loaders/GLTFLoader.js';
+function init() {
+    // Scene setup
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 1, 2);
 
-const loader = new GLTFLoader();
+    // Renderer setup
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
 
-loader.load(
-	// resource URL
-	'dist\robot.gltf',
-	// called when the resource is loaded
-	function ( gltf ) {
+    // Add light
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(0, 10, 10);
+    scene.add(directionalLight);
 
-		scene.add( gltf.scene );
+    // Load model
+    const loader = new GLTFLoader();
+    loader.load(
+        '/models/MaterialsVariantsShoe.gltf',
+        (gltf) => {
+            model = gltf.scene;
+            scene.add(model);
+            animate();
+        },
+        undefined,
+        (error) => {
+            console.error('An error happened while loading the model:', error);
+        }
+    );
 
-		gltf.animations; // Array<THREE.AnimationClip>
-		gltf.scene; // THREE.Group
-		gltf.scenes; // Array<THREE.Group>
-		gltf.cameras; // Array<THREE.Camera>
-		gltf.asset; // Object
+    // Resize handling
+    window.addEventListener('resize', onWindowResize, false);
+}
 
-	},
-	// called while loading is progressing
-	function ( xhr ) {
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
 
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+function animate() {
+    requestAnimationFrame(animate);
+    if (model) model.rotation.y += 0.01;
+    renderer.render(scene, camera);
+}
 
-	},
-	// called when loading has errors
-	function ( error ) {
-
-		console.log( 'An error happened' );
-
-	}
-);
+init();
