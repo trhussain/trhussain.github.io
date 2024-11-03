@@ -12,7 +12,7 @@
 <body>
     <script type="module">
         import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.module.min.js';
-        import { GLTFLoader } from 'loaders/GLTFLoader.js';
+        import { GLTFLoader } from '/loaders/GLTFLoader.js';
 
         let scene, camera, renderer, model;
 
@@ -37,7 +37,7 @@
             // Load model
             const loader = new GLTFLoader();
             loader.load(
-                'models/MaterialsVariantsShoe.gltf',
+                '/models/MaterialsVariantsShoe.gltf',
                 (gltf) => {
                     model = gltf.scene;
                     scene.add(model);
