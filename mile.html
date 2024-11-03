@@ -25,6 +25,8 @@
                 <li><a href="problem_def.html">Whats the problem?</a></li>
                 <li><a href="our_product.html">Our solutions</a></li>
                 <li class="active"><a href="mile.html">Milestones</a></li>
+                <li><a href="whoarewe.html">Who are we?</a></li>
+
             </ul>
             <ul class="icons">
                 <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
@@ -42,7 +44,7 @@
                             <div class="milestone-dot"></div>
                             <div class="milestone-description"  data-title="Milestone 1" data-description="Details for milestone 1">
                                 <h2>Milestone 1</h2>
-                                <p>Details for milestone 1</p>
+                                <p>Mechanical & Electrical Designs - V1 </p>
                             </div>
                             <div class="milestone-date">10/27</div>
                         </div>
@@ -51,26 +53,64 @@
                             <div class="milestone-dot"></div>
                             <div class="milestone-description">
                                 <h2>Milestone 2</h2>
-                                <p>Details for milestone 2</p>
+                                <p>Finalizing Electrical Designs </p>
                             </div>
                             <div class="milestone-date">10/30</div>
                         </div>
-                        <div class="milestone blue">
+                        <div class="milestone blue" onclick="openModal('modal3')">
                             <div class="milestone-dot"></div>
                             <div class="milestone-description">
                                 <h2>Milestone 3</h2>
-                                <p>Details for milestone 3</p>
+                                <p>V2 Drive Chassis & Python GUI</p>
                             </div>
                             <div class="milestone-date">11/2</div>
                         </div>
-                        <div class="milestone blue">
+                        <div class="milestone blue " onclick="openModal('modal4')">
                             <div class="milestone-dot"></div>
                             <div class="milestone-description">
                                 <h2>Milestone 4</h2>
-                                <p>Details for milestone 4</p>
+                                <p>Breadboarded circuit & Mechanical Design finalized</p>
                             </div>
-                            <div class="milestone-date">11/16</div>
+                            <div class="milestone-date">11/9</div>
                         </div>
+
+                        <div class="milestone blue " onclick="openModal('modal5')">
+                            <div class="milestone-dot"></div>
+                            <div class="milestone-description">
+                                <h2>Milestone 5</h2>
+                                <p>GUI Design finalized</p>
+                            </div>
+                            <div class="milestone-date">11/16 - Estimated PCB arrival date</div>
+                        </div>
+
+                        <div class="milestone blue " onclick="openModal('modal6')">
+                            <div class="milestone-dot"></div>
+                            <div class="milestone-description">
+                                <h2>Milestone 6</h2>
+                                <p>PCB Assmebled </p>
+                            </div>
+                            <div class="milestone-date">11/20</div>
+                        </div>
+
+                        <div class="milestone blue " onclick="openModal('modal7')">
+                            <div class="milestone-dot"></div>
+                            <div class="milestone-description">
+                                <h2>Milestone 7</h2>
+                                <p>Robot assembled and moving</p>
+                            </div>
+                            <div class="milestone-date">11/24</div>
+                        </div>
+
+                        <div class="milestone blue " onclick="openModal('modal8')">
+                            <div class="milestone-dot"></div>
+                            <div class="milestone-description">
+                                <h2>Milestone 8</h2>
+                                <p>Robot moving and reading live camera feeds</p>
+                            </div>
+                            <div class="milestone-date">11/30</div>
+                        </div>
+
+
                     </div>
                 </div>
             </section>
@@ -83,7 +123,7 @@
 
     <!-- Copyright -->
     <div id="copyright">
-        <ul><li>&copy; Hello there you're looking closely</li><li>Design: by Tahseen Hussain w/ HTML5UP <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        <ul><li>&copy; Hello there you're looking closely</li><li>HTML5UP <a href="https://html5up.net">HTML5 UP</a></li></ul>
     </div>
 
     <!-- Scripts -->
@@ -97,45 +137,115 @@
 
 
 <!-- Modal Structure -->
+<!-- Modal for Milestone 1 -->
 <div id="modal1" class="modal">
     <div class="modal-content">
         <div class="modal-header">
-            <span class="modal-title">Tahseen Hussain </span>
+            <span class="modal-title">Milestone 1</span>
             <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
         </div>
         <div class="modal-body">
-
-            <p>	Hi! My name is Tahseen Hussain, a 4th year ECE Undergraduate at UCSD. 
-				The past few years I've grown to love engineering as a discipline. Feel free 
-				to look at some of my projects! <br/><br/>
-
-
-				You can add any further details here, such as biography, achievements, or 
-				specific information related to the profile.</p>
+            <p>V1 Drive Chassis: First iteration of our drive chassis. Assembled it with just motors and wheels to see its maneuverability through a straightaway pipe.</p>
+            <p>Electrical Design: Finalize the desired sensor list and complete schematic design.</p>
         </div>
     </div>
 </div>
 
+<!-- Modal for Milestone 2 -->
 <div id="modal2" class="modal">
     <div class="modal-content">
         <div class="modal-header">
-            <span class="modal-title">Tahseen Hussain </span>
-            <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+            <span class="modal-title">Milestone 2</span>
+            <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
         </div>
         <div class="modal-body">
-
-            <p>	Hi! My name is asdasd Hussain, a 4th year ECE Undergraduate at UCSD. 
-				The past few years I've grown to love engineering as a discipline. Feel free 
-				to look at some of my projects! <br/><br/>
-
-
-				You can add any further details here, such as biography, achievements, or 
-				specific information related to the profile.</p>
+            <p>Have both schematic and board designed and integrated into the mechanical design.</p>
+            <p>Finalize board and schematic for ordering.</p>
         </div>
     </div>
 </div>
 
+<!-- Modal for Milestone 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Milestone 3</span>
+            <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>V2 Drive Chassis: Fix previous issues on V1 Chassis.</p>
+            <p>Python GUI displaying dummy camera feed and example diagnostic data.</p>
+        </div>
+    </div>
+</div>
 
+<!-- Modal for Milestone 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Milestone 4</span>
+            <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>Breadboarded circuit design for further mechanical testing finalized.</p>
+            <p>Mechanical design finalized.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Milestone 5 -->
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Milestone 5</span>
+            <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>GUI with multi-camera feed capabilities and diagnostics display of ultrasonic data.</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Milestone 6</span>
+            <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>PCB is assembled correctly, make determination whether or not make breadboarded/protoboarded version as backup</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Milestone 7</span>
+            <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>Robot capable of moving with either PCB or breadboarded version down a pipe</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal8" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Milestone 8</span>
+            <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+        </div>
+        <div class="modal-body">
+            <p>Live camera feeds from on-board cameras and diagnostics feed from moving robot achieved.
+                <b> Capable of identifying pipe fissures!</b></p>
+        </div>
+    </div>
+</div>
+
+<div id="info-box">
+    Click on each milestone for more information
+</div>
 
 </body>
 </html>
