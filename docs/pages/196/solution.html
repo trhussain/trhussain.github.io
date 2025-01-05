@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vroomba</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+	</head> 
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+                    
+					<h1 id="logo"><a href="../../index.html">Vroom</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="../../index.html">Home</a></li>
+							<li>
+								<a href="#">Projects List</a>
+								<ul>
+									<!-- <li><a href="pages/left-sidebar.html">Left Sidebar</a></li>
+									<li><a href="pages/right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="pages/no-sidebar.html">No Sidebar</a></li> -->
+									<li><a href="../pages/196/vroomba.html">Vroomba</a></li>
+									<li><a href="../pages/doomba.html">Doomba</a></li>
+									<li><a href="../pages/quadcopter.html">QuadCopter</a></li>
+
+									<li> <a href="#">Work & Research</a></li>
+
+								</ul>
+							</li>
+							<!-- <li><a href="pages/elements.html">Elements</a></li> -->
+							<li><a href="#" class="button primary">Wanna Chat? Send me a message!</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>My Solution - Technical Details & Description</h2>
+                            
+                            <nav id="taskbar">
+                                <ul class="taskbar">
+                                    <li><a href="vroomba.html">Whats the problem?</a></li>
+                                    <li><a href="hypothesis.html">Hypothesis</a></li>
+                                    <li><a href="solution.html">Solution</a></li>
+                                    <li><a href="updates.html">Milestones & Updates</a></li>
+               
+                                </ul>
+                            </nav>
+						</header>
+						<div class="centered-heading"> <h3>
+							PCB Analysis & Showcase </h3>
+							</div>
+
+						<div class="full-row">
+							<div class="sketchfab-embed-wrapper"> <iframe title="roomba" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/4711ee0b1ce94ad093e78caf058fd60e/embed?ui_theme=dark"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/roomba-4711ee0b1ce94ad093e78caf058fd60e?utm_medium=embed&utm_campaign=share-popup&utm_content=4711ee0b1ce94ad093e78caf058fd60e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> roomba </a> by <a href="https://sketchfab.com/crimsonbaba?utm_medium=embed&utm_campaign=share-popup&utm_content=4711ee0b1ce94ad093e78caf058fd60e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> crimsonbaba </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=4711ee0b1ce94ad093e78caf058fd60e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+					    </div>		
+						<div class="row gtr-150">
+									<div class="col-8 col-12-medium">
+		
+										<!-- Content -->
+											<section id="content">
+												<p>
+													This PCB is designed to manage and control multiple components, providing versatile functionality.
+													It supports two DC motors with forward, backward, and mixed mode capabilities, as well as a single DC motor for the vacuum mechanism.
+												</p>
+												
+												<p>
+													<img src="../../images/vroombas/power1.jpg" alt="Circuit Diagram" class="float-right" />
+
+													To enhance debugging and testing efficiency, I had some built-in mechanical features. Notably, there is a vertical USB-C mount. 
+													This design choice addresses the challenge of accessing the robot's internals when it is enclosed in its case. 
+													Typical horizontal mounts are difficult to reach in such scenarios, but the vertical USB-C mount allows for convenient access, 
+													making uploading code and debugging much easier without the need to repeatedly unscrew and reassemble the robot's lid.
+
+												</p>
+												
+												<p>
+													Additionally, I included an extra vertical XT30 connector for improved battery charging accessibility. While the horizontal XT30 connector is used for standard battery connections, charging the robot within its case traditionally requires the same tedious process as with USB-C: unscrewing the case, charging the battery, and screwing everything back together. 
+													To simplify this, the additional XT30 connector is externally accessible, just like the vertical USB-C, enabling hassle-free battery recharging.
+												</p>
+												
+												<p>
+													<img src="../../images/vroombas/aux3.jpg" alt="Circuit Diagram" class="float-right2" />
+
+													The design also features an onboard OLED display for live debugging indicators, along with LED strip ports for enhanced visual feedback. 
+													The brushless ESC motor port serves a dual purpose: it can connect auxiliary motor fans to improve suction capabilities or be used to control a brushless ESC motor directly. 
+													This brushless ESC capability is outside the scope of this project.
+												</p>
+												
+												
+
+											</section>
+		
+									</div>
+									<div class="col-4 col-12-medium">
+		
+										<!-- Sidebar -->
+											<section id="sidebar">
+												<section>
+													<h3 class="centered-heading" >ESP32 Schematic</h3>
+													<a href="#" class="image fit"><img src="../../images/vroombas/ESP32.jpg" alt="" /></a>
+
+													<p>This schematic illustrates my MCU setup, including connections for such as battery sensing, DC Motor Control, and vacuum pump control. 
+														I based the design off of the EPS32-S3 mini datasheet</p>
+			
+												</section>
+												<hr class="compact-hr" />												<section>
+													<h3 class="centered-heading" >Motor Driver Schematic </h3>
+													<a href="#" class="image fit"><img src="../../images/vroombas/mdrive.png" alt="" /></a>
+
+													<p>This motor driver schematic includes a DRV8411 dual H-bridge driver to control two DC motors, a vaccum pump, and ports for a BLDC ESC. 
+										</p>
+												</section>
+											</section>
+		
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="centered-heading"> <h3>
+							3D Model Analysis & Showcase </h3>
+							</div>
+
+					</div>
+				</div>
+
+
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+					<li><a href="https://www.linkedin.com/in/trhussain/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<!-- <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+					<li><a href="https://cad.onshape.com/documents/c6d635a9adde0d573726c837/w/cfa9466e62d22a6fa45458f5/e/5ce34a83703cfa42b7c46bcd" 
+						class="onshape-link"><span class="label">OnShape</span></a></li>
+						<li><a href="https://github.com/trhussain" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+
+			 </ul>
+				<ul class="copyright">
+					<li>&copy; Designed using HTML5UP, it awesome!.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../../assets/js/jquery.dropotron.min.js"></script>
+		<script src="../../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
+
