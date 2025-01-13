@@ -1,15 +1,11 @@
 #include <FastLED.h>
 #include "NimBLEDevice.h"
 #include "pin_def.h"
-#include <Servo.h>
 
-CRGB leds[NUM_LEDS];
-Servo esc; 
-// vroombaCode.ino
 void ledController(std::string typedChar); // Prototype for ledController
 void fillSolid(CRGB color);               // Prototype for fillSolid
 void motorController(const std::string& command);
-
+CRGB leds[NUM_LEDS];
 void all_off() { 
     leds[0] = CRGB::Black;
     
@@ -19,7 +15,6 @@ void all_off() {
     analogWrite(BIN1, 0);
     analogWrite(BIN2, 0);
     analogWrite(ESC_PIN, 0);
-    esc.attach(ESC_PIN);
 
 }
 class MyServerCallbacks : public NimBLEServerCallbacks {

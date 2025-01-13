@@ -4442,3 +4442,72 @@ input, select, textarea {
     font-size: 14px;
     color: #888;
 }
+.poster-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	color: white;
+}
+
+.poster-section .major h2 {
+    font-size: 2rem;
+    color: #f0f0f0;
+
+}
+
+.poster-section p {
+    font-size: 1.2rem;
+    color: #fff6f6;
+    margin-bottom: 1rem;
+}
+
+/* Styling for the poster container */
+.poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project-poster {
+    max-width: 70%;
+    height: 1000px; /* Set a fixed height */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.video-section {
+    text-align: center;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-radius: 10px;
+    background: #222; /* Dark background for contrast */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-section .major h2 {
+    font-size: 2rem;
+    color: white;
+}
+
+.video-section p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-container video {
+    max-width: 60%; /* Set the video width to 60% of the container */
+    height: 1000px; /* Set a fixed height */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}

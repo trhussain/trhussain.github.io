@@ -43,25 +43,3 @@ void setMotor2(bool forward, int speed) {
     analogWrite(BIN1, forward ? speed : 0); // Set PWM for BIN1
     analogWrite(BIN2, forward ? 0 : speed); // Set PWM for BIN2
 }
-
-void testESC() { 
-  for (int speed = 1000; speed <= 2000; speed += 10) {
-      esc.writeMicroseconds(speed);  // Set throttle
-      Serial.println(speed);
-      delay(50);  // Adjust speed gradually
-    }
-
-    // Hold at maximum throttle
-    delay(2000);
-
-    // Gradually decrease throttle back to 0%
-    for (int speed = 2000; speed >= 1000; speed -= 10) {
-      esc.writeMicroseconds(speed);  // Set throttle
-      Serial.println(speed);
-      delay(50);  // Adjust speed gradually
-    }
-
-    delay(2000);  // Hold at minimum throttle
-
-
-}
