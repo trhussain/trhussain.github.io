@@ -1,8 +1,13 @@
+#include <FastLED.h>
 #include "NimBLEDevice.h"
-void ledController() { 
-  Serial.println("motor called");
+#include "pin_def.h"
 
-}
+CRGB leds[NUM_LEDS];
+// vroombaCode.ino
+void ledController(std::string typedChar); // Prototype for ledController
+void fillSolid(CRGB color);               // Prototype for fillSolid
+void motorController(const std::string& command);
+
 class MyServerCallbacks : public NimBLEServerCallbacks {
     void onConnect(NimBLEServer* pServer, NimBLEConnInfo& connInfo) override {
         Serial.println("Client connected!");
@@ -21,17 +26,18 @@ class MyCallbacks : public NimBLECharacteristicCallbacks {
     void onWrite(NimBLECharacteristic *characteristic, NimBLEConnInfo& connInfo) override {
         std::string value = characteristic->getValue();
         if (!value.empty()) {
-            Serial.print("Received: ");
-            Serial.println(value.c_str()); // Print the received message
-             
+
             // Correct string comparison
             if (value == "b" | value == "o") {
-                motorController();
+                ledController(value);
             }
-            
+            else if (value == "w" | value == "a" | value == "s" |value == "d")
+                motorController(value);
         }
     }
 };
+
+
 
 
 void setup() {
@@ -60,8 +66,24 @@ void setup() {
 
     Serial.println("BLE Server is running...");
     Serial.println("Motor tests");
+
+    FastLED.addLeds<WS2812B, LED_PIN, GRB>(leds, NUM_LEDS);
+    FastLED.clear();  // Clear all LEDs initially
+    FastLED.show();   // Send data to turn off all LEDs
+
+    // Set motor pins as outputs
+    pinMode(MOTOR1_PWM1, OUTPUT);
+    pinMode(MOTOR1_PWM2, OUTPUT);
+    pinMode(MOTOR2_PWM1, OUTPUT);
+    pinMode(MOTOR2_PWM2, OUTPUT);
+
+    // Ensure motors are stopped initially
+    stopMotors();
+
+
 }
 
 void loop() {
-    // No actions needed in the loop
-}
+
+    
+  }
