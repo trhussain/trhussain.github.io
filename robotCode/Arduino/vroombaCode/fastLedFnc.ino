@@ -9,6 +9,7 @@ void ledController(std::string typedChar) {
     fillSolid(CRGB::Orange);
 
   }
+  
 }
 
 void fillSolid(CRGB color) {

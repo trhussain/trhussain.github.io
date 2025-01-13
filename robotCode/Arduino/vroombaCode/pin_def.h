@@ -9,9 +9,9 @@
 #define NUM_LEDS 1
 
 
-#define MOTOR1_PWM1 6  // AIN1 for Motor 1
-#define MOTOR1_PWM2 7  // AIN2 for Motor 1
-#define MOTOR2_PWM1 8  // BIN1 for Motor 2
-#define MOTOR2_PWM2 9  // BIN2 for Motor 2
-
+#define AIN1 6  // AIN1 for Motor 1
+#define AIN2 7  // AIN2 for Motor 1
+#define BIN1 8  // BIN1 for Motor 2
+#define BIN2 9  // BIN2 for Motor 2
+#define ESC_PIN 1
 #endif // PIN_DEFINITIONS_H
