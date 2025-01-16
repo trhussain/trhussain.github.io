@@ -3,34 +3,30 @@ void stopMotors() {
     analogWrite(AIN2, 0);
     analogWrite(BIN1, 0);
     analogWrite(BIN2, 0);
+    ledcWrite(escPin,pulseToDuty(1100, freq, resolution) );
+
+    fillSolid(CRGB::Blue);
 }
 
 void motorController(const std::string& command) {
     if (command == "w") {
-        setMotor1(true, 100);  // Move Motor 1 forward at speed 150
-        setMotor2(true, 100);  // Move Motor 2 forward at speed 150
+        setMotor1(true, SPEED);  // Move Motor 1 forward at speed 150
+        setMotor2(true, SPEED);  // Move Motor 2 forward at speed 150
         Serial.println("Moving forward");
     } else if (command == "s") {
-        setMotor1(false, 100); // Move Motor 1 backward at speed 150
-        setMotor2(false, 100); // Move Motor 2 backward at speed 150
+        setMotor1(false, SPEED); // Move Motor 1 backward at speed 150
+        setMotor2(false, SPEED); // Move Motor 2 backward at speed 150
         Serial.println("Moving backward");
     } else if (command == "a") {
-        setMotor1(false, 100); // Motor 1 backward
-        setMotor2(true, 100);  // Motor 2 forward
+        setMotor1(false, SPEED); // Motor 1 backward
+        setMotor2(true, SPEED);  // Motor 2 forward
         Serial.println("Turning left");
     } else if (command == "d") {
-        setMotor1(true, 100);  // Motor 1 forward
-        setMotor2(false, 100); // Motor 2 backward
+        setMotor1(true, SPEED);  // Motor 1 forward
+        setMotor2(false, SPEED); // Motor 2 backward
         Serial.println("Turning right");
     }
-    else if (command == "q") {
-        analogWrite(ESC_PIN, 128);
 
-    }
-    else if (command == "e") {
-        analogWrite(ESC_PIN, 0);
-      
-    }
 }
 // Motor 1 Control
 void setMotor1(bool forward, int speed) {

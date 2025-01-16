@@ -14,10 +14,15 @@
 #define AIN2 7  // AIN2 for Motor 1
 #define BIN1 8  // BIN1 for Motor 2
 #define BIN2 9  // BIN2 for Motor 2
-#define ESC_PIN 1  // GPIO pin connected to ESC
+
+
 #define PWM_CHANNEL 0  // PWM channel
 #define PWM_FREQUENCY 50  // Frequency in Hz (50Hz for ESC)
 #define PWM_RESOLUTION 16  // Resolution in bits
-
-
+#define SPEED 200
+const int escPin = 1;        // PWM pin for ESC
+const int freq = 50;         // ESC frequency (50 Hz)
+const int escChannel = 0;    // PWM channel
+const int resolution = 12;   // 12-bit resolution (0-4095)
+int brushThresh = 0;
 #endif // PIN_DEFINITIONS_H

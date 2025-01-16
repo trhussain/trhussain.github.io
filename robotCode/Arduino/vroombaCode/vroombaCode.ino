@@ -2,9 +2,8 @@
 #include "NimBLEDevice.h"
 #include "pin_def.h"
 
-void ledController(std::string typedChar); // Prototype for ledController
-void fillSolid(CRGB color);               // Prototype for fillSolid
-void motorController(const std::string& command);
+
+
 CRGB leds[NUM_LEDS];
 void all_off() { 
     leds[0] = CRGB::Black;
@@ -14,7 +13,7 @@ void all_off() {
     analogWrite(AIN2, 0);
     analogWrite(BIN1, 0);
     analogWrite(BIN2, 0);
-    analogWrite(ESC_PIN, 0);
+    ledcWrite(escPin,pulseToDuty(1100, freq, resolution) );
 
 }
 class MyServerCallbacks : public NimBLEServerCallbacks {
@@ -42,6 +41,12 @@ class MyCallbacks : public NimBLECharacteristicCallbacks {
             }
             else if (value == "w" | value == "a" | value == "s" |value == "d" | value =="q" | value =="e")
                 motorController(value);
+            else if (value == "v") {
+                brush();
+            }
+            else if (value == "n") { 
+                brushLoop();
+            }
             else if (value == "x") { 
                 all_off();
             }
@@ -53,7 +58,7 @@ class MyCallbacks : public NimBLECharacteristicCallbacks {
 
 
 void setup() {
-    Serial.begin(115200);
+     Serial.begin(9600);
     delay(2000); // Allow time for Serial Monitor to initialize
     Serial.println("Starting BLE Server...");
 
@@ -88,14 +93,15 @@ void setup() {
     pinMode(AIN2, OUTPUT);
     pinMode(BIN1, OUTPUT);
     pinMode(BIN2, OUTPUT);
-
+    escSetup();
+    delay(1000);
     // Ensure motors are stopped initially
     stopMotors();
+
 
 
 }
 
 void loop() {
-
     
   }
