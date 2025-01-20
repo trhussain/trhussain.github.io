@@ -19,7 +19,7 @@
 #define PWM_CHANNEL 0  // PWM channel
 #define PWM_FREQUENCY 50  // Frequency in Hz (50Hz for ESC)
 #define PWM_RESOLUTION 16  // Resolution in bits
-#define SPEED 200
+#define SPEED 255
 const int escPin = 1;        // PWM pin for ESC
 const int freq = 50;         // ESC frequency (50 Hz)
 const int escChannel = 0;    // PWM channel

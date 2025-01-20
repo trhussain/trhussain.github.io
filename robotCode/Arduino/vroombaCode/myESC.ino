@@ -49,11 +49,11 @@ void brushLoop() {
               int duty = pulseToDuty(pulseWidth, freq, resolution);
               ledcWrite(escPin, duty);
 
-              Serial.print("loop Pulse Width: ");
-              Serial.print(pulseWidth);
-              Serial.print(" µs, Duty Cycle: ");
-              Serial.println(duty);
-              delay(1000);
+              //Serial.print("loop Pulse Width: ");
+              //Serial.print(pulseWidth);
+              //Serial.print(" µs, Duty Cycle: ");
+              //Serial.println(duty);
+              //delay(1000);
               // Wait and observe motor behavior
             
         }
@@ -67,9 +67,9 @@ void offbruhs() {
 void brush() {
   int myDuty = pulseToDuty(1200, freq, resolution);
   ledcWrite(escPin,pulseToDuty(1400, freq, resolution) );
-  delay(2000); // Stabilize
+  delay(1000); // Stabilize
   ledcWrite(escPin,pulseToDuty(1450, freq, resolution) );
-  delay(2000);
+  delay(1000);
 
 
 }
