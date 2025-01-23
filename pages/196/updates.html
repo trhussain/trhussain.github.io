@@ -106,68 +106,64 @@
 
 				<div class="video-section">
 					<header class="major">
-						<h2>Project Video</h2>
-						<p>Watch the Vroomba in action! This video showcases its features, operation, and key milestones.</p>
+						<h2>Project Videos</h2>
+						<p>Watch the Vroomba in action! These videos showcase its features and operation!</p>
 					</header>
-					<div class="video-container">
-						<video controls>
-							<source src="../../images/vroombas/testVideo.MOV" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-					</div>
-				</div>
-				<div class="video-section">
-					<header class="major">
-						<h2>References & Resources</h2>
-						<p>Here are some of the useful references & resources I accessed. </p>
-					</header>
-					<p>For this project, I made several forum posts on Arduino community forums, PlatformIO forums, and Espressif forums 
-						to try and debug problems I had. I also had to read through many pages of documentation in reference to the components 
-						I was using for my PCB. The biggest issue I would say I had in this project was the board design, as there was so much 
-						I just didn't know and so much to learn and read. Luckily, there is a catalog of data online to use for reference. 
-					</p>
-					<div class="resource-container">
-						<a href="https://forum.arduino.cc/t/esp32-s3-failed-to-write-to-target-ram-error-during-upload/1326748/9" 
-						   target="_blank" 
-						   style="text-decoration: none; color: #007acc; font-size: 16px;">
-							🔗 ESP32-S3: Failed to Write to Target RAM Error During Upload
-						</a>
-						<a href="https://forum.arduino.cc/t/esp32-s3-failed-to-write-to-target-ram-error-during-upload/1326748/9" 
-						target="_blank" 
-						style="text-decoration: none; color: #007acc; font-size: 16px;">
-						 🔗 LED-C API
-					 </a>
-					</a>
-					<a href="https://forum.arduino.cc/t/usbserial-not-recognized-custom-esp32-s3-board/1341670"
-					target="_blank" 
-					style="text-decoration: none; color: #007acc; font-size: 16px;">
-					 🔗 USBSerial Errors
-				 </a>
-				</a>
-				<a href="https://forum.arduino.cc/t/custom-esp32-board-repeated-flashing-error/1340568/7" 
-				target="_blank" 
-				style="text-decoration: none; color: #007acc; font-size: 16px;">
-				 🔗 Flashing Errors 
-			 </a>
-			</a>
-			<a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html" 
-			target="_blank" 
-			style="text-decoration: none; color: #007acc; font-size: 16px;">
-			 🔗 Espressif Guide on ESP32-S3 -> Links to further datasheets within 
-		 </a>
-		 <a href="https://github.com/simplefoc/Arduino-FOC/issues/390" 
-		 target="_blank" 
-		 style="text-decoration: none; color: #007acc; font-size: 16px;">
-		  🔗 LEDC 3.x.x API Update 
-	  </a>
-	  <a href="https://www.ti.com/product/DRV8411" 
-	  target="_blank" 
-	  style="text-decoration: none; color: #007acc; font-size: 16px;">
-	   🔗 DRV8411A Datasheet
-   </a>
+					<div class="video-container" style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+						<!-- Video 1 -->
+						<div class="video-box" style="flex: 1; min-width: 300px; max-width: 48%;">
+							<video controls style="width: 100%; border-radius: 8px;">
+								<source src="../../images/vroombas/test1.MOV" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<p style="text-align: center; margin-top: 10px;">Video 1: Movement</p>
+						</div>
+						<!-- Video 2 -->
+						<div class="video-box" style="flex: 1; min-width: 300px; max-width: 48%;">
+							<video controls style="width: 100%; border-radius: 8px;">
+								<source src="../../images/vroombas/test2.MOV" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							<p style="text-align: center; margin-top: 10px;">Video 2: Vaccuming</p>
+						</div>
 					</div>
 				</div>
 				
+				
+				<section class="references">
+					<h2>References & Resources</h2>
+					<p>Here are some of the useful references & resources I accessed:</p>
+					<div class="reference-item">
+						<a href="https://forum.arduino.cc/t/esp32-s3-failed-to-write-to-target-ram-error-during-upload/1326748/9" >ESP32-S3: Failed to Write to Target RAM Error During Upload</a>
+					  <span>A forum post I made concerning an issue with target ram during upload sequence.</span>
+					</div>
+
+					<div class="reference-item">
+					  <a href="https://forum.arduino.cc/t/usbserial-not-recognized-custom-esp32-s3-board/1341670/7">USBSerial Errors</a>
+					  <span>Another forum post I wrote outlining an issue with USBSerial vs Serial</span>
+					</div>
+
+					<div class="reference-item">
+						<a href="https://forum.arduino.cc/t/custom-esp32-board-repeated-flashing-error/1340568/7">Repeated Flashing Error</a>
+						<span>Another forum post concerning a repeated error sequency when flashing code</span>
+					  </div>
+
+
+					<div class="reference-item">
+					    <a href="https://www.ti.com/product/DRV8411" >DRV8411A Datasheet</a>
+					  <span>Datasheet for the motor driver used in the project.</span>
+					</div>
+					<div class="reference-item">
+						<a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf">ESP32 Datasheet</a>
+						<span>Documentation for ESP32 Chips.</span>
+					  </div>
+					<div class="reference-item">
+						<a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/api/ledc.html">LEDC API</a>
+						<span>Documentation for LEDC control using ESP32's hardware peripherals.</span>
+					  </div>
+
+
+				  </section>
 			<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">

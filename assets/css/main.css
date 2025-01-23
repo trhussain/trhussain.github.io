@@ -4512,9 +4512,35 @@ input, select, textarea {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .resource-container a {
+	text-align: center;
+
 	display: block;
 	text-decoration: none;
 	color: #007acc;
 	font-size: 16px;
+  }
+  
+  .references {
+	text-align: center;
+
+  }
+  
+  .reference-item {
+	text-align: left;
+
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	gap: 20px;
+  }
+  
+  .reference-item a {
+	flex: 1;
+	color: #007BFF;
+	text-decoration: none;
+  }
+  
+  .reference-item span {
+	flex: 2;
   }
   
