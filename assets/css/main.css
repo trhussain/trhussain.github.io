@@ -4543,4 +4543,21 @@ input, select, textarea {
   .reference-item span {
 	flex: 2;
   }
-  
+
+  #pilab {
+    height: auto !important;
+    min-height: 100vh;
+}
+
+#pilab .content {
+    overflow-y: auto;
+}
+.image:before {
+    display: none;
+}
+#four .image.fit img {
+    width: 100%;
+    height: 500%;
+    object-fit: cover;
+}
+
