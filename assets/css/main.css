@@ -4561,3 +4561,8 @@ input, select, textarea {
     object-fit: cover;
 }
 
+#pi .image.fit img {
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+}
